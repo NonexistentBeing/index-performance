@@ -1,0 +1,22 @@
+{
+    "name": "index-performance",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "tsc && node dist \"./pages.txt\"",
+        "build": "tsc",
+        "test": "ts-node TS/Scrape/testScrape.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/puppeteer": "^5.4.5",
+        "ts-node": "^10.7.0",
+        "typescript": "^4.6.3"
+    },
+    "dependencies": {
+        "puppeteer": "^13.6.0"
+    }
+}
