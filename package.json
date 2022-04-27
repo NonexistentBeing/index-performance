@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "tsc && node dist \"./pages.txt\"",
+        "start": "tsc && node dist \"C://out/\" \"./pages.txt\"",
         "build": "tsc",
         "test": "ts-node TS/Scrape/testScrape.ts"
     },

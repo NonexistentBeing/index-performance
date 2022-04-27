@@ -11,7 +11,7 @@ function getPageTableValues(el: Element) {
     const cells = (el as HTMLTableElement).rows?.[1]?.cells;
     if (!cells) return null;
     const [, ...values] = cells;
-    return values.map((val) => `${val.innerText}%`);
+    return values.map((val) => `${val.innerText.replace(/[—™]/gi, '')}%`);
 }
 
 function getPageTableHead(el: Element) {
@@ -33,7 +33,7 @@ export async function morningStar(page: Page) {
     return [name, ticker, ...values];
 }
 
-export async function getHead(page: Page) {
+export async function morningStarHead(page: Page) {
     const name = 'name';
     const ticker = 'ticker';
 
