@@ -6,5 +6,5 @@ interface ScrapeFunctions {
 }
 
 export const scrapeFunctions: ScrapeFunctions = {
-    'morningstar.com': morningStar,
+    'www.morningstar.com': morningStar,
 };

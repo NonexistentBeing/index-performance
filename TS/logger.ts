@@ -31,21 +31,21 @@ class Logger {
 
     static info(...message: any[]) {
         const logger = Logger.getInstance();
-        if (logger.level >= LogLevel.Info) {
+        if (logger.level <= LogLevel.Info) {
             console.log(chroma('[LOG]:', { fg: 'yellow' }), ...message);
         }
     }
 
     static warn(...message: any[]) {
         const logger = Logger.getInstance();
-        if (logger.level >= LogLevel.Warning) {
+        if (logger.level <= LogLevel.Warning) {
             console.warn(chroma('[WARN]:', { fg: 'red' }), ...message);
         }
     }
 
     static error(...message: any[]) {
         const logger = Logger.getInstance();
-        if (logger.level == LogLevel.Error) {
+        if (logger.level <= LogLevel.Error) {
             console.error(
                 chroma('[WARN]:', { fg: 'black', bg: 'red' }),
                 ...message

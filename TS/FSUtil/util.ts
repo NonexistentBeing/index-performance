@@ -1,4 +1,11 @@
 import { readFile, writeFile } from 'fs/promises';
+import fs from 'fs';
+
+export function setupFs() {
+    if (!fs.existsSync('./out')) {
+        fs.mkdirSync('./out');
+    }
+}
 
 export async function readIndexURL(fileName: string) {
     const file = await readFile(fileName);
